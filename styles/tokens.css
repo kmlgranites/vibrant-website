@@ -1,0 +1,349 @@
+/* ==========================================================================
+   Vibrant Design System — Colors & Type
+   --------------------------------------------------------------------------
+   Source of truth pulled from /02-Color-System and /03-Typography of the
+   "Vibrant — Brand & Style Guidelines" Figma file.
+   ========================================================================== */
+
+/* ---------- Fonts -------------------------------------------------------- */
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../fonts/InstrumentSans-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../fonts/InstrumentSans-Italic.ttf") format("truetype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../fonts/InstrumentSans-Medium.ttf") format("truetype");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../fonts/InstrumentSans-MediumItalic.ttf") format("truetype");
+  font-weight: 500; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../fonts/InstrumentSans-SemiBold.ttf") format("truetype");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../fonts/InstrumentSans-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../fonts/InstrumentSans-Bold.ttf") format("truetype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../fonts/InstrumentSans-BoldItalic.ttf") format("truetype");
+  font-weight: 700; font-style: italic; font-display: swap;
+}
+
+/* Body face — Inter (Google Fonts). Loaded via CDN where used. */
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"); */
+
+:root {
+  /* ===================== COLORS — PRIMARY ============================== */
+  /* Vibrant Blue — primary brand colour (logo + CTA). */
+  --vibrant-blue:      #00B8D6;     /* 0 184 214 */
+  --vibrant-blue-alt:  #00AAD1;     /* 0 170 209 — alt logo blue */
+
+  /* Vibrant Green — growth / success / energy. */
+  --vibrant-green:     #2EC76B;     /* 46 199 107 */
+  --vibrant-green-alt: #42F481;     /* 66 244 129 — bright logo green */
+
+  /* Vibrant Orange — accent / highlight / energy swoosh. */
+  --vibrant-orange:    #ED614D;     /* 237 97 77 */
+
+  /* ===================== COLORS — BLUE SCALE =========================== */
+  --blue-50:  #E5F7FA;
+  --blue-100: #B2EDF5;
+  --blue-200: #66D9E8;
+  --blue-300: #33CCDE;
+  --blue-400: #00B8D6;   /* base */
+  --blue-500: #0099B2;
+  --blue-600: #007A8F;
+  --blue-700: #005C6B;
+  --blue-800: #003D47;
+  --blue-900: #001F24;
+
+  /* ===================== COLORS — GREEN SCALE ========================== */
+  --green-50:  #EBFAF0;
+  --green-100: #BFEDCF;
+  --green-200: #82DBA1;
+  --green-300: #59D187;
+  --green-400: #2EC76B;   /* base */
+  --green-500: #26A659;
+  --green-600: #1F8547;
+  --green-700: #176336;
+  --green-800: #0D4224;
+  --green-900: #082112;
+
+  /* ===================== COLORS — ORANGE SCALE ========================= */
+  --orange-50:  #FCF0F0;
+  --orange-100: #FACCC7;
+  --orange-200: #F5A69E;
+  --orange-300: #F08278;
+  --orange-400: #ED614D;   /* base */
+  --orange-500: #C75242;
+  --orange-600: #9E4236;
+  --orange-700: #783029;
+  --orange-800: #4F211C;
+  --orange-900: #290F0D;
+
+  /* ===================== COLORS — NEUTRAL PALETTE ====================== */
+  --white:    #FFFFFF;
+  --gray-50:  #F8F9FA;   /* near-white surface */
+  --gray-100: #E9ECEF;
+  --gray-200: #DEE2E6;
+  --gray-300: #CED4DA;
+  --gray-400: #ADB5BD;
+  --gray-500: #6C757D;
+  --gray-600: #495057;
+  --gray-700: #343A40;
+  --gray-800: #212529;
+  --gray-900: #21262E;   /* "DarkBG" — preferred dark surface */
+  --black:    #000000;
+
+  /* Brand-specific deep canvases used in cover slides. */
+  --canvas-deep-teal: #06313B;   /* slide 01 cover */
+  --canvas-mint:      #8FE3E3;   /* logo backdrop */
+
+  /* ===================== SEMANTIC TOKENS =============================== */
+  /* Foregrounds */
+  --fg-strong:  #1A1A1F;       /* primary text */
+  --fg-default: #212529;       /* body */
+  --fg-muted:   #495057;       /* secondary copy */
+  --fg-subtle:  #6C757D;       /* captions, meta */
+  --fg-faint:   #ADB5BD;       /* disabled, hairline labels */
+  --fg-on-dark: #FFFFFF;
+  --fg-on-color: #FFFFFF;
+
+  /* Backgrounds / surfaces */
+  --bg-canvas:  #FFFFFF;
+  --bg-surface: #FAFAFA;       /* used as left rail in spec slides */
+  --bg-muted:   #F8F9FA;
+  --bg-sunken:  #E9ECEF;
+  --bg-dark:    #21262E;
+  --bg-deep:    #06313B;
+
+  /* Borders */
+  --border-hairline: #E5E5EB;
+  --border-default:  #DEE2E6;
+  --border-strong:   #CED4DA;
+
+  /* Interactive */
+  --action-primary:        var(--vibrant-blue);
+  --action-primary-hover:  #0099B2;
+  --action-primary-press:  #007A8F;
+  --action-on-primary:     #FFFFFF;
+
+  --action-secondary:       #21262E;
+  --action-secondary-hover: #343A40;
+
+  --focus-ring: #00B8D6;
+
+  /* Status */
+  --status-success: var(--vibrant-green);
+  --status-success-soft: var(--green-50);
+  --status-danger:  var(--vibrant-orange);
+  --status-danger-soft: var(--orange-50);
+  --status-info:    var(--vibrant-blue);
+  --status-info-soft: var(--blue-50);
+  --status-warning: #F2C94C;
+
+  /* ===================== TYPOGRAPHY ==================================== */
+  /* Family stacks. Heading face is Instrument Sans (brand display).
+     Body face is Inter (per Figma typography spec); fallbacks tuned to
+     keep widths close on machines without it. */
+  --font-display: "Instrument Sans", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-body:    "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-mono:    ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+
+  /* Weights */
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  /* Letter spacing — Instrument Sans display is set tight in the
+     guidelines (-1% to -2%). */
+  --tracking-display: -0.02em;
+  --tracking-tight:   -0.01em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.18em;     /* eyebrow / overline */
+
+  /* Line heights */
+  --leading-display: 1.0;
+  --leading-tight:   1.1;
+  --leading-snug:    1.25;
+  --leading-normal:  1.5;
+  --leading-loose:   1.6;
+
+  /* Type scale (px) — pulled from "TYPE SCALE" panel in Figma. */
+  --fs-display: 64px;   /* hero / 64/72 */
+  --fs-h1:      48px;   /* 48/56 */
+  --fs-h2:      36px;   /* 36/44 */
+  --fs-h3:      28px;   /* 28/36 */
+  --fs-h4:      22px;   /* 22/30 */
+  --fs-body-lg: 18px;   /* 18/28 */
+  --fs-body:    16px;   /* 16/24 */
+  --fs-body-sm: 14px;   /* 14/20 */
+  --fs-caption: 12px;   /* 12/16 */
+  --fs-overline:11px;   /* 11/16, tracked */
+
+  /* ===================== SPACING (4-pt grid) =========================== */
+  --space-0:  0;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* ===================== RADII ========================================= */
+  --radius-xs:    4px;
+  --radius-sm:    6px;
+  --radius-md:    8px;
+  --radius-lg:    12px;     /* color swatch radius */
+  --radius-xl:    16px;
+  --radius-2xl:   24px;
+  --radius-pill:  999px;    /* primary CTA, tags */
+  --radius-circle: 50%;
+
+  /* ===================== SHADOWS ======================================= */
+  --shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.04);
+  --shadow-sm: 0 1px 3px rgba(16, 24, 40, 0.06), 0 1px 2px rgba(16, 24, 40, 0.04);
+  --shadow-md: 0 4px 8px rgba(16, 24, 40, 0.06), 0 2px 4px rgba(16, 24, 40, 0.04);
+  --shadow-lg: 0 12px 24px rgba(16, 24, 40, 0.08), 0 4px 8px rgba(16, 24, 40, 0.04);
+  --shadow-xl: 0 24px 48px rgba(16, 24, 40, 0.10), 0 8px 16px rgba(16, 24, 40, 0.06);
+
+  /* Brand glow — used sparingly under blue CTAs in marketing. */
+  --shadow-brand: 0 12px 28px rgba(0, 184, 214, 0.25);
+
+  /* ===================== MOTION ======================================== */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast:   120ms;
+  --duration-normal: 200ms;
+  --duration-slow:   320ms;
+}
+
+/* ============================================================================
+   SEMANTIC TYPE CLASSES
+   ============================================================================ */
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--leading-normal);
+  color: var(--fg-default);
+  background: var(--bg-canvas);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.t-display, h1.display {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-display);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+  color: var(--fg-strong);
+}
+h1, .t-h1 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h1);
+  line-height: 1.16;
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-strong);
+}
+h2, .t-h2 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h2);
+  line-height: 1.22;
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-strong);
+}
+h3, .t-h3 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-h3);
+  line-height: 1.28;
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-strong);
+}
+h4, .t-h4 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-h4);
+  line-height: 1.36;
+  color: var(--fg-strong);
+}
+.t-body-lg, p.lead {
+  font-size: var(--fs-body-lg);
+  line-height: 1.55;
+  color: var(--fg-muted);
+}
+p, .t-body {
+  font-size: var(--fs-body);
+  line-height: var(--leading-normal);
+  color: var(--fg-default);
+}
+.t-body-sm, small {
+  font-size: var(--fs-body-sm);
+  line-height: 1.43;
+  color: var(--fg-muted);
+}
+.t-caption {
+  font-size: var(--fs-caption);
+  line-height: 1.33;
+  color: var(--fg-subtle);
+}
+.t-overline, .t-eyebrow {
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-overline);
+  line-height: 1.45;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--vibrant-blue);
+}
+code, kbd, samp, .t-mono {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+}
+
+/* Links — underlined Vibrant Blue with darker hover. */
+a {
+  color: var(--vibrant-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1.5px;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+a:hover { color: var(--blue-500); }
+a:active { color: var(--blue-600); }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
